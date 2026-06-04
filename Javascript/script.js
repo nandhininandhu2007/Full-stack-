@@ -88,4 +88,4 @@ b = 1;
 c = 0;
 
 var result = a++ + --b + ++c - ++a + ++b + c++ + b++ + a;
-console.log(result);+
+console.log(result);
