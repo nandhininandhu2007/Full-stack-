@@ -56,9 +56,9 @@ console.log(!a);
 a = 10;
 b = "10";
 console.log(a<b);
-console.log(a>b);
+console.log(a<b);
 
-console.log(a<=b);
+console.log(a<b);
 console.log(a>b);
 console.log(a<=b);
 console.log(a>=b);
@@ -170,7 +170,7 @@ var result = (mark>=90) ? "0 Grade" :
         break;
     }
     case 5:{
-        console.log("Thursday");
+        console.log("Thursaday");
         break;
     }
     case 6:{
@@ -250,7 +250,7 @@ console.log(arr3);
 
 //Destructuring Operator
  
-var [m1,m2,m3,m4,m5] = [95,96,98,99,88];
+var [m1,m2,m3,m4,m5] =[95,96,98,99,88]
 console.log(m1,m2,m3,m4,m5);
 
 var {name,dept,mobile,email,isactive} = {
@@ -286,12 +286,12 @@ for(let key in obj) {
 
 var arr = [1,2,3,4,,5];
 
-var result = arr.map((val)=>(val*2));
+var result = arr.map((va1)=>(va1*2));
 console.log(result)
 
-var even = arr.filter((val)=>val%2===0);
+var even = arr.filter((va1)=>va1%2===0);
 console.log(even)
 
-var sum = arr.reduce((add,val)=>(add+val),0);
+var sum = arr.reduce((add,va1)=>(add+va1),0);
 console.log(sum)
 
