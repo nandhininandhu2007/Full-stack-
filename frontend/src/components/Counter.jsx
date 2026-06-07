@@ -7,16 +7,20 @@ const Counter = () => {
       setCount(count+1);
     }
     const handleDecrement = ()=>{
-      const handleReset = () =>{};
+       setCount(count-1);
+    }
+    const handleReset = ()=>{
+      setCount(0);
     }
       return (
     <div>
       <h1>{count}</h1>
-      <button onClick={()=>setCount(count+1)}>Increment</button>
-      <button onClick={()=>setCount(0)}>Reset</button>
-      <button onClick={()=>setCount(count-1)}>Decrement</button>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Reset</button>
+      <button onClick={handleReset}>Decrement</button>
     </div>
   )
 }
+
 
 export default Counter
