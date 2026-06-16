@@ -10,7 +10,7 @@ const Effects = () => {
         console.log("component Re-render")
     },[count])
 
-    useEffect(())=>{
+    useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((res)=>res.jeson())
         .then((users)=>setData(users))
@@ -24,5 +24,6 @@ const Effects = () => {
       <button onClick={()=>setLike(like+1)}>❤️</button>
     </div>
   )
+}
 
 export default Effects

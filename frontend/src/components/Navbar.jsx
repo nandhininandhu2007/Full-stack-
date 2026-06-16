@@ -19,6 +19,9 @@ const Navbar = () => {
                   <li className="List">
                     <Link className="link" to='/useEffect'>useEffect</Link>
                     </li>
+                  <li className="list">
+                    <Link className="link" to='/todo'>Todo</Link>
+                  </li>
 
             </u1>
         </nav>

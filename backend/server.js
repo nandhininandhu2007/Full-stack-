@@ -1,0 +1,50 @@
+const express = require('express');
+
+const app = express();
+const connectDB = require("./config/db")
+const todo =require("./model/todo")
+
+connectDB();
+const PORT = 3000;
+
+
+app.get('/',async(req,res)=>{
+    try{
+        const todos = await todo.find();
+        res.json(todos);
+    }catch(err){
+        res.send(err);
+    } 
+})
+
+app.post('/',async(req,res)=>{
+   try{
+        const task = await todo.create(req.body);
+        res.status(201).json(task);
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+app.put('/:id',async(req,res)=>{
+    try{
+        const updatedTodo = await todo.findbyIdAndUpdate
+        (req.params.id,req.body,{new:true})
+        res.status(200).json(updatedTodo);
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
+app.delete('/',async(req,res)=>{
+    try{
+        await todo.findByIdAndDelete(req.params.id);
+        res.status(200).json({"message":"Task Deleted Successfully"})
+    }catch(err){
+        res.status(500).send(err);
+    }
+    })
+
+app.listen(3000,()=>{
+    console.log('Server running on port http://localhost:3000')
+})
